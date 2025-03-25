@@ -1,0 +1,133 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Virtual Environments
+venv/
+env/
+ENV/
+.env
+.venv
+env.bak/
+venv.bak/
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Distribution / packaging
+.Python
+*.manifest
+*.spec
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# ML specific
+*.pkl
+*.h5
+*.model
+models/
+logs/
+runs/
+data/*.csv
+data/*.json
+data/*.txt
+data/*.tsv
+data/*.h5
+data/*.parquet
+data/*.arrow
+outputs/
+checkpoints/
+tensorboard/
+wandb/
+mlruns/
+
+# Config files
+config.yaml
+config.json
+.env
+credentials.json
+secrets.yaml
+secrets.json
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Large media files
+*.mp4
+*.tiff
+*.avi
+*.flv
+*.mov
+*.wmv
+*.h264
+*.mkv
+
+# Docker
+.dockerignore
+docker-compose.override.yml
+
+# Documentation build
+docs/_build/
+
+# Node.js (for web components)
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Specific to these projects - large files to exclude from git
+*.pdf
+*.jpeg
+*.jpg
+*.png
+*.gif
+lstm_models/
+transformer_models/
+saved_models/
+embeddings/
+
+# Allow specific exemptions where needed
+!docs/images/*.png
+!examples/images/*.png 
