@@ -1,0 +1,125 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llamapackage"
+description = "Package management and distribution system for the LlamaSearch.ai ecosystem"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "LlamaSearch Team", email = "info@llamasearch.ai"}
+]
+maintainers = [
+    {name = "LlamaSearch Team", email = "info@llamasearch.ai"}
+]
+keywords = ["package", "management", "distribution", "llama", "registry"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "requests>=2.31.0",
+    "click>=8.1.3",
+    "pydantic>=2.4.2",
+    "fastapi>=0.104.0",
+    "uvicorn>=0.23.2",
+    "sqlalchemy>=2.0.22",
+    "alembic>=1.12.0",
+    "python-jose[cryptography]>=3.3.0",
+    "python-multipart>=0.0.6",
+    "semantic-version>=2.10.0",
+    "rich>=13.6.0",
+    "tomli>=2.0.1; python_version < '3.11'",
+    "packaging>=23.2",
+]
+dynamic = ["version"]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.2",
+    "pytest-cov>=4.1.0",
+    "black>=23.9.1",
+    "isort>=5.12.0",
+    "mypy>=1.5.1",
+    "ruff>=0.0.292",
+    "pre-commit>=3.5.0",
+    "tox>=4.11.3",
+    "sphinx>=7.2.6",
+    "sphinx-rtd-theme>=1.3.0",
+]
+server = [
+    "uvicorn[standard]>=0.23.2",
+    "gunicorn>=21.2.0",
+    "httpx>=0.25.0",
+    "redis>=5.0.1",
+    "celery>=5.3.4",
+]
+storage = [
+    "boto3>=1.28.62",
+    "google-cloud-storage>=2.13.0",
+    "azure-storage-blob>=12.18.3",
+]
+all = [
+    "llamapackage[dev,server,storage]",
+]
+
+[project.scripts]
+llamapackage = "llamapackage.cli:main"
+
+[project.urls]
+"Homepage" = "https://github.com/llamasearch/llamapackages"
+"Bug Tracker" = "https://github.com/llamasearch/llamapackages/issues"
+"Documentation" = "https://llamapackages.llamasearch.ai/"
+"Source Code" = "https://github.com/llamasearch/llamapackages"
+
+[tool.setuptools]
+package-dir = {"" = "llamapackage/src"}
+
+[tool.setuptools.packages.find]
+where = ["llamapackage/src"]
+
+[tool.setuptools_scm]
+write_to = "llamapackage/src/llamapackage/_version.py"
+
+[tool.black]
+line-length = 88
+target-version = ["py38", "py39", "py310", "py311"]
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+line_length = 88
+multi_line_output = 3
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+python_functions = "test_*"
+python_classes = "Test*"
+addopts = "--cov=llamapackage --cov-report=term-missing"
+
+[tool.ruff]
+line-length = 88
+target-version = "py38"
+select = ["E", "F", "I", "N", "W", "D"]
+ignore = ["D203", "D212"]
+
+[tool.ruff.per-file-ignores]
+"__init__.py" = ["F401"]
+"tests/*" = ["D"] 
