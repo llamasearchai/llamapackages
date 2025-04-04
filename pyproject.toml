@@ -3,16 +3,16 @@ requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "llamapackage"
+name = "llamapackage-llamasearch"
 description = "Package management and distribution system for the LlamaSearch.ai ecosystem"
 readme = "README.md"
 requires-python = ">=3.8"
 license = {text = "MIT"}
 authors = [
-    {name = "LlamaSearch Team", email = "info@llamasearch.ai"}
+    {name = "llamapackage-llamasearch", email = "nikjois@llamasearch.ai"}
 ]
 maintainers = [
-    {name = "LlamaSearch Team", email = "info@llamasearch.ai"}
+    {name = "llamapackage-llamasearch", email = "nikjois@llamasearch.ai"}
 ]
 keywords = ["package", "management", "distribution", "llama", "registry"]
 classifiers = [
