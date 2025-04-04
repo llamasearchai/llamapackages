@@ -2,7 +2,7 @@
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
-[![Documentation](https://img.shields.io/badge/docs-latest-orange)](https://llamapackages.llamasearch.ai/)
+[![Documentation](https://img.shields.io/badge/docs-latest-orange)](https://llamasearch.ai
 
 A comprehensive package management and distribution system for the LlamaSearch.ai ecosystem. LlamaPackages provides a unified way to discover, install, and manage packages across all Llama-related projects.
 
@@ -84,7 +84,7 @@ pytest --cov=llamapackage
 
 ## 📖 Documentation
 
-Comprehensive documentation is available at [https://llamapackages.llamasearch.ai/](https://llamapackages.llamasearch.ai/)
+Comprehensive documentation is available at [https://llamasearch.ai
 
 ### API Reference
 
@@ -100,7 +100,7 @@ Comprehensive documentation is available at [https://llamapackages.llamasearch.a
 
 ```bash
 # Clone the repository
-git clone https://github.com/llamasearch/llamapackages.git
+git clone https://llamasearch.ai
 cd llamapackages
 
 # Set up a virtual environment
